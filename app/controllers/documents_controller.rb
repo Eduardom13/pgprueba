@@ -14,7 +14,8 @@ def index
 end
 def guardar
     #render plain: params[:dato].inspect
-    @v=JSON.parse(params[:dato])
+    v=JSON.parse(params[:dato])
+    
 
 end
 
