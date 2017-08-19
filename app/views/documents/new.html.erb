@@ -1,0 +1,32 @@
+
+<%= form_for :document, url: documents_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+  <p>
+    <%= f.label :cedula %><br>
+    <%= f.text_field :cedula %>
+  </p>
+  <p>
+    <%= f.label :dato1 %><br>
+    <%= f.text_field :dato1[0] %>
+  </p>
+  <p>
+    <%= f.label :dato1 %><br>
+    <%= f.text_field :dato1[1] %>
+  </p>
+  <p>
+    <%= f.label :dato1 %><br>
+    <%= f.text_field :dato1[2] %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
