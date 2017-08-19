@@ -1,19 +1,137 @@
-<h1>Listing articles</h1>
+<h1 class="w3-center">Lectura de Datos</h1>
+<div class="w3-container ">
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th>Cedula</th>
+<table class="w3-table w3-bordered w3-hoverable w3-centered  " >
+  <tr class="w3-center w3-red ">
+    <th class="w3-center w3-border">Usuario</th>
+    <th class="w3-center w3-border">ID</th>
+    <th colspan="7" class="w3-center w3-border"> Fecha</th>
+    <th colspan="4" class="w3-center w3-border"> Entradas 0-5v</th>
+    <th colspan="4" class="w3-center w3-border" > Entradas 0-10v</th>
+    <th colspan="8" class="w3-center w3-border" > Entradas 4-20mv</th>
+    <th colspan="8" class="w3-center w3-border"> Entradas 0-24v</th>
+
+
   </tr>
+      <tr class="w3-center w3-blue w3-small">
 
+        <th ></th>
+        <th ></th>
+        <th class="w3-center w3-border " colspan="7">DD/MM/YYYY HH:MM:SS</th>
+        <th class="w3-center w3-border">A1</th>
+        <th class="w3-center w3-border">A2</th>
+        <th class="w3-center w3-border">A3</th>
+        <th class="w3-center w3-border">A4</th>
+        <th class="w3-center w3-border">B1</th>
+        <th class="w3-center w3-border">B2</th>
+        <th class="w3-center w3-border">B3</th>
+        <th class="w3-center w3-border">B4</th>
+        <th class="w3-center w3-border" >C1</th>
+        <th class="w3-center w3-border">C2</th>
+        <th class="w3-center w3-border">C3</th>
+        <th class="w3-center w3-border">C4</th>
+        <th class="w3-center w3-border">C5</th>
+        <th class="w3-center w3-border">C6</th>
+        <th class="w3-center w3-border">C7</th>
+        <th class="w3-center w3-border">C8</th>
+        <th class="w3-center w3-border">D1</th>
+        <th class="w3-center w3-border">D2</th>
+        <th class="w3-center w3-border">D3</th>
+        <th class="w3-center w3-border">D4</th>
+        <th class="w3-center w3-border">D5</th>
+        <th class="w3-center w3-border">D6</th>
+        <th class="w3-center w3-border">D7</th>
+        <th class="w3-center w3-border">D8</th>
+      </tr>
   <% @documents.each do |document| %>
     <tr>
-      <td><%= document.title %></td>
-      <td><%= document.text %></td>
-      <td><%= document.cedula %></td>
-      
+      <th class="w3-center w3-border"><%= document.User %></th>
+      <th class="w3-center w3-border"><%= document.ids %></th>
+      <th class="w3-center w3-border w3-small" colspan="7"><%= document.day %>/
+        <%=document.month%>/
+        <%=document.year%>
+        <%=document.hour%>:
+        <%=document.min%>:
+        <%=document.sec%></th>
+      <th class="w3-center w3-border"> <% if document.lcc1 != "-1" %>
+        <%=document.lcc1%>
+      <% end %></th>
+      <th class="w3-center w3-border"><%= if document.lcc2 != "-1"
+        document.lcc2
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lcc3 != "-1"
+        document.lcc3
+       end %></th>
+      <th class="w3-center w3-border"> <%= if document.lcc4 != "-1"
+        document.lcc4
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lcd1 != "-1"
+        document.lcd1
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lcd2 != "-1"
+        document.lcd2
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lcd3 != "-1"
+        document.lcd3
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lcd4 != "-1"
+        document.lcd4
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lcv1 != "-1"
+        document.lcv1
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lcv2 != "-1"
+        document.lcv2
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lcv3 != "-1"
+        document.lcv3
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lcv4 != "-1"
+        document.lcv4
+       end %></th>
+
+      <th class="w3-center w3-border"><%= if document.lcv5=! "-1"
+        document.lcv5
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lcv6 != "-1"
+        document.lcv6
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lcv7 != "-1"
+        document.lcv7
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lcv8 != "-1"
+        document.lcv8
+       end %></th>
+
+      <th class="w3-center w3-border"><%= if document.lvd1 != "-1"
+        document.lvd1
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lvd2 != "-1"
+        document.lvd2
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lvd3 != "-1"
+        document.lvd3
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lvd4 != "-1"
+        document.lvd4
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lvd5 != "-1"
+        document.lvd5
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lvd6 != "-1"
+        document.lvd6
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lvd7 != "-1"
+        document.lvd7
+       end %></th>
+      <th class="w3-center w3-border"><%= if document.lvd8 != "-1"
+        document.lvd8
+       end %></th>
+
+
+
 
     </tr>
   <% end %>
 </table>
+</div>
