@@ -1,0 +1,2 @@
+class DropAlert < ApplicationRecord
+end

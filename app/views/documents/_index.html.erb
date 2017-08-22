@@ -1,0 +1,89 @@
+<% @documents.each do |document| %>
+
+  <tr>
+    <td class="w3-center "><%= document.User %></td>
+    <td class="w3-center "><%= document.ids %></td>
+    <td class="w3-center  w3-small" colspan="7"><%= document.day %>/
+      <%=document.month%>/
+      <%=document.year%>
+      <%=document.hour%>:
+      <%=document.min%>:
+      <%=document.sec%></td>
+     <% if document.lcc1 != -1 %>
+     <td class="w3-center ">
+     <%=document.lcc1%>
+
+    <%end %></td>
+    <td class="w3-center "><%= if document.lcc2 != -1
+      document.lcc2
+     end %></td>
+    <td class="w3-center "><%= if document.lcc3 != -1
+      document.lcc3
+     end %></td>
+    <td class="w3-center "> <%= if document.lcc4 != -1
+      document.lcc4
+     end %></td>
+    <td class="w3-center "><%= if document.lcd1 != -1
+      document.lcd1
+    end%></td>
+    <td class=" w3-center "><%= if document.lcd2 != -1
+      document.lcd2
+     end %></td>
+    <td class="w3-center "><%= if document.lcd3 != -1
+      document.lcd3
+     end %></td>
+    <td class="w3-center "><%= if document.lcd4 != -1
+      document.lcd4
+     end %></td>
+    <td class="w3-center "><%= if document.lcv1 != -1
+      document.lcv1
+     end %></td>
+    <td class="w3-center "><%= if document.lcv2 != -1
+      document.lcv2
+     end %></td>
+    <td class="w3-center "><%= if document.lcv3 != -1
+      document.lcv3
+     end %></td>
+    <td class="w3-center "><%= if document.lcv4 != -1
+      document.lcv4
+     end %></td>
+
+    <td class="w3-center "><%= if document.lcv5 != -1
+      document.lcv5
+     end %></td>
+    <td class="w3-center "><%= if document.lcv6 != -1
+      document.lcv6
+     end %></td>
+    <td class="w3-center "><%= if document.lcv7 != -1
+      document.lcv7
+     end %></td>
+    <td class="w3-center "><%= if document.lcv8 != -1
+      document.lcv8
+     end %></td>
+
+    <td class="w3-center "><%= if document.lvd1 != -1
+      document.lvd1
+     end %></td>
+    <td class="w3-center "><%= if document.lvd2 != -1
+      document.lvd2
+     end %></td>
+    <td class="w3-center "><%= if document.lvd3 != -1
+      document.lvd3
+     end %></td>
+    <td class="w3-center "><%= if document.lvd4 != -1
+      document.lvd4
+     end %></td>
+    <td class="w3-center "><%= if document.lvd5 != -1
+      document.lvd5
+     end %></td>
+    <td class="w3-center "><%= if document.lvd6 != -1
+      document.lvd6
+     end %></td>
+    <td class="w3-center "><%= if document.lvd7 != -1
+      document.lvd7
+     end %></td>
+    <td class="w3-center "><%= if document.lvd8 != -1
+      document.lvd8
+     end %></td>
+  </tr>
+  <% end %>

@@ -10,10 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170819170059) do
+ActiveRecord::Schema.define(version: 20170822020827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "alerts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "ecda1"
+    t.float "ecda2"
+    t.float "ecda3"
+    t.float "ecda4"
+    t.float "ecca1"
+    t.float "ecca2"
+    t.float "ecca3"
+    t.float "ecca4"
+    t.float "ecva1"
+    t.float "ecva2"
+    t.float "ecva3"
+    t.float "ecva4"
+    t.float "ecva5"
+    t.float "ecva6"
+    t.float "ecva7"
+    t.float "ecva8"
+  end
 
   create_table "documents", force: :cascade do |t|
     t.string "title"
@@ -21,39 +42,38 @@ ActiveRecord::Schema.define(version: 20170819170059) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "cedula"
-    t.integer "dato1"
     t.string "User"
     t.string "ids"
-    t.string "year"
-    t.string "month"
-    t.string "day"
-    t.string "hour"
-    t.string "min"
-    t.string "sec"
-    t.string "lcc1"
-    t.string "lcc2"
-    t.string "lcc3"
-    t.string "lcc4"
-    t.string "lcd1"
-    t.string "lcd2"
-    t.string "lcd3"
-    t.string "lcd4"
-    t.string "lcv1"
-    t.string "lcv2"
-    t.string "lcv3"
-    t.string "lcv4"
-    t.string "lcv5"
-    t.string "lcv6"
-    t.string "lcv7"
-    t.string "lcv8"
-    t.string "lvd1"
-    t.string "lvd2"
-    t.string "lvd3"
-    t.string "lvd4"
-    t.string "lvd5"
-    t.string "lvd6"
-    t.string "lvd7"
-    t.string "lvd8"
+    t.integer "year"
+    t.integer "month"
+    t.integer "day"
+    t.integer "hour"
+    t.integer "min"
+    t.integer "sec"
+    t.float "lcc1"
+    t.float "lcc2"
+    t.float "lcc3"
+    t.float "lcc4"
+    t.float "lcd1"
+    t.float "lcd2"
+    t.float "lcd3"
+    t.float "lcd4"
+    t.float "lcv1"
+    t.float "lcv2"
+    t.float "lcv3"
+    t.float "lcv4"
+    t.float "lcv5"
+    t.float "lcv6"
+    t.float "lcv7"
+    t.float "lcv8"
+    t.float "lvd1"
+    t.float "lvd2"
+    t.float "lvd3"
+    t.float "lvd4"
+    t.float "lvd5"
+    t.float "lvd6"
+    t.float "lvd7"
+    t.float "lvd8"
   end
 
 end

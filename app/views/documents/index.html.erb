@@ -1,15 +1,16 @@
 <h1 class="w3-center">Lectura de Datos</h1>
 <div class="w3-container ">
 
-<table class="w3-table w3-bordered w3-hoverable w3-centered  " >
-  <tr class="w3-center w3-red ">
-    <th class="w3-center w3-border">Usuario</th>
-    <th class="w3-center w3-border">ID</th>
-    <th colspan="7" class="w3-center w3-border"> Fecha</th>
-    <th colspan="4" class="w3-center w3-border"> Entradas 0-5v</th>
-    <th colspan="4" class="w3-center w3-border" > Entradas 0-10v</th>
-    <th colspan="8" class="w3-center w3-border" > Entradas 4-20mv</th>
-    <th colspan="8" class="w3-center w3-border"> Entradas 0-24v</th>
+<table class="   " id="doc" >
+  <thead>
+  <tr class="w3-center  ">
+    <th class="w3-center ">Usuario</th>
+    <th class="w3-center ">ID</th>
+    <th colspan="7" class="w3-center "> Fecha</th>
+    <th colspan="4" class="w3-center "> Entradas 0-5v</th>
+    <th colspan="4" class="w3-center " > Entradas 0-10v</th>
+    <th colspan="8" class="w3-center " > Entradas 4-20mv</th>
+    <th colspan="8" class="w3-center "> Entradas 0-24v</th>
 
 
   </tr>
@@ -17,121 +18,205 @@
 
         <th ></th>
         <th ></th>
-        <th class="w3-center w3-border " colspan="7">DD/MM/YYYY HH:MM:SS</th>
-        <th class="w3-center w3-border">A1</th>
-        <th class="w3-center w3-border">A2</th>
-        <th class="w3-center w3-border">A3</th>
-        <th class="w3-center w3-border">A4</th>
-        <th class="w3-center w3-border">B1</th>
-        <th class="w3-center w3-border">B2</th>
-        <th class="w3-center w3-border">B3</th>
-        <th class="w3-center w3-border">B4</th>
-        <th class="w3-center w3-border" >C1</th>
-        <th class="w3-center w3-border">C2</th>
-        <th class="w3-center w3-border">C3</th>
-        <th class="w3-center w3-border">C4</th>
-        <th class="w3-center w3-border">C5</th>
-        <th class="w3-center w3-border">C6</th>
-        <th class="w3-center w3-border">C7</th>
-        <th class="w3-center w3-border">C8</th>
-        <th class="w3-center w3-border">D1</th>
-        <th class="w3-center w3-border">D2</th>
-        <th class="w3-center w3-border">D3</th>
-        <th class="w3-center w3-border">D4</th>
-        <th class="w3-center w3-border">D5</th>
-        <th class="w3-center w3-border">D6</th>
-        <th class="w3-center w3-border">D7</th>
-        <th class="w3-center w3-border">D8</th>
+        <th class="w3-center " colspan="7">DD/MM/YYYY HH:MM:SS</th>
+        <th class="w3-center ">A1</th>
+        <th class="w3-center ">A2</th>
+        <th class="w3-center ">A3</th>
+        <th class="w3-center ">A4</th>
+        <th class="w3-center ">B1</th>
+        <th class="w3-center ">B2</th>
+        <th class="w3-center ">B3</th>
+        <th class="w3-center ">B4</th>
+        <th class="w3-center " >C1</th>
+        <th class="w3-center ">C2</th>
+        <th class="w3-center ">C3</th>
+        <th class="w3-center ">C4</th>
+        <th class="w3-center ">C5</th>
+        <th class="w3-center ">C6</th>
+        <th class="w3-center ">C7</th>
+        <th class="w3-center ">C8</th>
+        <th class="w3-center ">D1</th>
+        <th class="w3-center ">D2</th>
+        <th class="w3-center ">D3</th>
+        <th class="w3-center ">D4</th>
+        <th class="w3-center ">D5</th>
+        <th class="w3-center ">D6</th>
+        <th class="w3-center ">D7</th>
+        <th class="w3-center ">D8</th>
       </tr>
-  <% @documents.each do |document| %>
-    <tr>
-      <th class="w3-center w3-border"><%= document.User %></th>
-      <th class="w3-center w3-border"><%= document.ids %></th>
-      <th class="w3-center w3-border w3-small" colspan="7"><%= document.day %>/
-        <%=document.month%>/
-        <%=document.year%>
-        <%=document.hour%>:
-        <%=document.min%>:
-        <%=document.sec%></th>
-      <th class="w3-center w3-border"> <% if document.lcc1 != "-1" %>
-        <%=document.lcc1%>
-      <% end %></th>
-      <th class="w3-center w3-border"><%= if document.lcc2 != "-1"
-        document.lcc2
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lcc3 != "-1"
-        document.lcc3
-       end %></th>
-      <th class="w3-center w3-border"> <%= if document.lcc4 != "-1"
-        document.lcc4
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lcd1 != "-1"
-        document.lcd1
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lcd2 != "-1"
-        document.lcd2
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lcd3 != "-1"
-        document.lcd3
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lcd4 != "-1"
-        document.lcd4
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lcv1 != "-1"
-        document.lcv1
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lcv2 != "-1"
-        document.lcv2
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lcv3 != "-1"
-        document.lcv3
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lcv4 != "-1"
-        document.lcv4
-       end %></th>
+      </thead>
+      <tbody>
+      <div id="documets">
 
-      <th class="w3-center w3-border"><%= if document.lcv5=! "-1"
-        document.lcv5
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lcv6 != "-1"
-        document.lcv6
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lcv7 != "-1"
-        document.lcv7
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lcv8 != "-1"
-        document.lcv8
-       end %></th>
-
-      <th class="w3-center w3-border"><%= if document.lvd1 != "-1"
-        document.lvd1
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lvd2 != "-1"
-        document.lvd2
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lvd3 != "-1"
-        document.lvd3
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lvd4 != "-1"
-        document.lvd4
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lvd5 != "-1"
-        document.lvd5
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lvd6 != "-1"
-        document.lvd6
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lvd7 != "-1"
-        document.lvd7
-       end %></th>
-      <th class="w3-center w3-border"><%= if document.lvd8 != "-1"
-        document.lvd8
-       end %></th>
-
-
-
-
-    </tr>
-  <% end %>
+        <%= render "index"%>
+      </div>
+    </tbody>
 </table>
 </div>
+
+<div id="container" style="min-width: 210px; max-width: 300px; height: 200px; margin: 0 0"></div>
+<script type="text/javascript">
+var g= <%= raw @tlast.lcc1%>;
+
+Highcharts.chart('container', {
+
+  chart: {
+      type: 'gauge',
+      plotBackgroundColor: null,
+      plotBackgroundImage: null,
+      plotBorderWidth: 0,
+      plotShadow: true
+  },
+
+  title: {
+      text: 'Termometro'
+  },
+
+  pane: {
+      startAngle: -150,
+      endAngle: 150,
+      background: [{
+          backgroundColor: {
+              linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+              stops: [
+                  [0, '#FFF'],
+                  [1, '#333']
+              ]
+          },
+          borderWidth: 0,
+          outerRadius: '109%'
+      }, {
+          backgroundColor: {
+              linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+              stops: [
+                  [0, '#333'],
+                  [1, '#FFF']
+              ]
+          },
+          borderWidth: 1,
+          outerRadius: '107%'
+      }, {
+          // default background
+      }, {
+          backgroundColor: '#000',
+          borderWidth: 0,
+          outerRadius: '105%',
+          innerRadius: '103%'
+      }]
+  },
+
+  // the value axis
+  yAxis: {
+      min: 0,
+      max: 80,
+
+      minorTickInterval: 'auto',
+      minorTickWidth: 1,
+      minorTickLength: 10,
+      minorTickPosition: 'inside',
+      minorTickColor: '#666',
+
+      tickPixelInterval: 30,
+      tickWidth: 2,
+      tickPosition: 'inside',
+      tickLength: 10,
+      tickColor: '#666',
+      labels: {
+          step: 1,
+          rotation: 'auto'
+      },
+      title: {
+          text: ''
+      },
+      plotBands: [{
+          from: 0,
+          to: 30,
+          color: '#55BF3B' // green
+      }, {
+          from: 30,
+          to: 50,
+          color: '#DDDF0D' // yellow
+      }, {
+          from: 50,
+          to: 80,
+          color: '#DF5353' // red
+      }]
+  },
+
+  series: [{                     //json que importa
+      name: 'Temperatura',
+      data: [g],
+      tooltip: {
+          valueSuffix: ' C°'
+      }
+  }]
+
+},
+// Add some life
+// function (chart) {
+//   if (!chart.renderer.forExport) {
+//       setInterval(function () {
+//           var point = chart.series[0].points[0],
+//               newVal,
+//               inc = Math.round((Math.random() - 0.5) * 20);
+//
+//           newVal = point.y + inc;
+//           if (newVal < 0 || newVal > 200) {
+//               newVal = point.y - inc;
+//           }
+//
+//           point.update(newVal);
+//
+//       }, 3000);
+//   }
+// }
+);
+</script>
+<div id="container2"></div>
+<script type="text/javascript">
+Highcharts.chart('container2', {
+//json con estas caracteristicas
+title: {
+  text: 'Planta llenado PDVSA '
+},
+
+subtitle: {
+  text: 'el vigia'
+},
+
+yAxis: {
+  title: {
+    text: 'Number of Employees'
+  }
+},
+legend: {
+  layout: 'vertical',
+  align: 'right',
+  verticalAlign: 'middle'
+},
+
+plotOptions: {
+  series: {
+    pointStart: 2010
+  }
+},
+
+series: [{
+  name: 'Presion',
+  data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+}, {
+  name: 'Nivel',
+  data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+}, {
+  name: 'Altura',
+  data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+}, {
+  name: 'Temperatura',
+  data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+}, {
+  name: 'Gas',
+  data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+}]
+
+});
+</script>
