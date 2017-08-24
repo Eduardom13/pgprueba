@@ -178,7 +178,7 @@ Highcharts.chart('container', {
 
 
 <script type="text/javascript">
-var t =2;
+var t = <%= raw @table%>;
 
 Highcharts.chart('container2', {
 //json con estas caracteristicas
@@ -209,7 +209,7 @@ plotOptions: {
 
 series: [{
   name: 'Presion',
-  data:  <%= raw @table%>
+  data: t
 }]
 
 });
