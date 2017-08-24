@@ -14,7 +14,7 @@ end
 def index
   #@documents = Document.all
   @documents = Document.last(3)
-  @table = Document.pluck(:lcc1).last(8).to_json
+  @table = Document.pluck("lcc1").last(8).to_json
 
   @tlast = Document.last
   @alerts = Alert.all
