@@ -65,7 +65,7 @@ Highcharts.chart('container', {
       plotBackgroundColor: null,
       plotBackgroundImage: null,
       plotBorderWidth: 0,
-      plotShadow: false
+      plotShadow: true
   },
 
   title: {
@@ -98,7 +98,7 @@ Highcharts.chart('container', {
       }, {
           // default background
       }, {
-          backgroundColor: '#fff',
+          backgroundColor: '#000',
           borderWidth: 0,
           outerRadius: '105%',
           innerRadius: '103%'
@@ -192,7 +192,7 @@ subtitle: {
 
 yAxis: {
   title: {
-    text: ' C°'
+    text: 'Values'
   }
 },
 legend: {
@@ -208,7 +208,7 @@ plotOptions: {
 },
 
 series: [{
-  name: 'Temperatura',
+  name: 'Presion',
   data: t
 }]
 
