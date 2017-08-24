@@ -14,6 +14,8 @@ end
 def index
   #@documents = Document.all
   @documents = Document.last(3)
+  @table = Document.pluck(:lcc1).last(8).to_json
+
   @tlast = Document.last
   @alerts = Alert.all
 #   respond_to do |format|
@@ -56,7 +58,7 @@ def guardar
       respond_to do |format|
       format.html
       format.js {render inline: "location.reload();"}
-      format.json { render json: @document, status: :created, location: @document } 
+      format.json { render json: @document, status: :created, location: @document }
     end
 
       # {"ecd":[1,0,0,0],"ecdm":["100",0,0,0],"ecdmm":["200",0,0,0],"ecda":["150",0,0,0],"ecc":[0,1,0,0],"ecdm2":[0,"54",0,0],"ecdmm2":[0,"100",0,0],"ecda2":[0,"60",0,0],"ecuv":[0,0,0,0,1,0,0,0],"ecdm3":[0,0,0,0,"32",0,0,0],"ecdmm3":[0,0,0,0,"60",0,0,0],"ecda3":[0,0,0,0,"40",0,0,0],"ed":[0,0,1,1,0,0,1,0]}

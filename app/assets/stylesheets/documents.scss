@@ -2,15 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #container2 {
-  min-width: 310px;
-  max-width: 800px;
+  min-width: 700px;
+  max-width: 1000px;
   height: 400px;
-  margin: 0 0
+  margin: 0 0;
 
 }
 #container1{
   background-color: #000;
 
+}
+.ff{
+  margin: 0px 80px;
+  float: left;
 }
 @import url(https://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
 * {
